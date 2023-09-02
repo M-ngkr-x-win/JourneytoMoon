@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+.global-container {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto 300px auto;
+  grid-template-rows: 250px 300px auto;
+  background-color: #ffff;
+    
+}
+.iu-login {
+  display: subgrid;
+  background-color: #ffff;
+  z-index: 0;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+.flex-container {
+  /*background-color:pink;*/
+}
+.iu-logo {
+  order: 0;
+  width: 60px;
+  height: 20px;
+}
+img {
+  border-radius: 50%;
+  margin: -80px 100px;
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.iu-main-login {
+  order: 1;
+  /*background-color: green;*/
+  margin: 0;
+  padding: 0;
+}
+form {
+  margin: 0;
+  padding: 0;
+}
+.iu-form-conatiner {
+  /*background-color:red;*/
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+input{
+  outline: none;
+}
+input:focus {
+  outline: none;
+  border-color: rgba(20, 88, 175, 1);
+  box-shadow: 0 0 3px rgba(20, 88, 175, 1);
+}
+#user-conatiner {
+  width: 250px;
+  order: 0;
+  margin: 10px 0px 10px 0px;
+  padding: 0;
+}
+input[type="text"] {
+  width: 225px;
+  padding: 15px;
+  padding-top: 22px;
+  padding-bottom: 8px;
+  border: 0.5px solid gray;
+  border-radius: 7px;
+}
+::placeholder {
+  font-size: 1.2em;
+  font-family: "Roboto", sans-serif;
+}
+#password-conatiner {
+  width: 250px;
+  order: 1;
+  margin: 10px 0px 10px 0px;
+}
+input[type="password"] {
+  font-family: "Roboto", sans-serif;
+  width: 225px;
+  padding: 15px;
+  padding-top: 22px;
+  padding-bottom: 8px;
+  border: 0.5px solid gray;
+  border-radius: 7px;
+}
+.btn {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: rgba(69, 127, 200, 1);
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: 250px;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: rgba(20, 88, 175, 1);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  background-color: rgba(20, 88, 175, 1);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
+#submit-conatiner {
+  order: 2;
+  margin: 10px 10px 10px 10px;
+}
+
+#login_link {
+  order: 3;
+  margin: 10px 10px 10px 10px;
+}
+a {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9em;
+  color: #2a78a5;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+footer,
+p {
+  text-align: right;
+  position: fixed;
+  width: 100%;
+  right: 0;
+  padding: 15px;
+  margin: 0;
+  bottom: 0;
+  background-color: #2c3438;
+  color: white;
+}
+footer{
+  border-top: 1px solid black;
+}
+
+
+.input-container {
+	position: relative;
+	margin-top: 15px;
+	margin-bottom: 25px;
+}
+.floating-label {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #7c7878;
+  position: absolute;
+  pointer-events: none;
+  top: 16px;
+  left: 12px;
+  transition: all 0.1s ease;
+}
+.form-control{
+  padding-top: 19px;
+  padding-bottom: 11px;
+}
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label{
+  top: 5px;
+  bottom: 0px;
+  left: 15px;
+  font-size: 11px;
+  opacity: 1;
+  color: #2a78a5;
+}

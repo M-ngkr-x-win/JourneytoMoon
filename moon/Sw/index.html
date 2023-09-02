@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Bala's Brainwaves Engine</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Black+Ops+One%7CSource+Code+Pro" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+  <audio id="hidden-audio" src="mem.mp3"></audio>
+<!-- partial:index.partial.html -->
+<div class="container">
+    <!-- random quote machine -->
+    <div class="wrapper quote-machine border blue">
+      <header class="border blue">
+        <center><h1>Bala's Brainwaves Engine</h1></center>
+        <span class="version border blue">V1</span>
+      </header>
+      <main class="border blue">
+
+        <blockquote id="quote"></blockquote>
+        <div class="block">
+          <a href="#" id="newQuoteBtn" class="btn">Next Thought</a>
+        </div>
+      </main>
+      <footer class="border blue">
+        <br>
+        <p class="page-author">With love from Balas</p>
+        <br>
+      </footer>
+    </div>
+
+    <div class="wrapper mem border blue">
+     <div class="cells">
+       <header><h2>DATA.</h2></header>
+       <ul class="border red">
+         <li id="0">/<br/><span class="module"></span></li>
+         <li id="1">/<br/><span class="module"></span></li>
+         <li id="2">/<br/><span class="module"></span></li>
+         <li id="3">/<br/><span class="module"></span></li>
+         <li id="4">/<br/><span class="module"></span></li>
+         <li id="5">/<br/><span class="module"></span></li>
+         <li id="6">/<br/><span class="module"></span></li>
+         <li id="7">/<br/><span class="module"></span></li>
+         <li id="8">/<br/><span class="module"></span></li>
+         <li id="9">/<br/><span class="module"></span></li>
+         <li id="10">/<br/><span class="module"></span></li>
+         <li id="11">/<br/><span class="module"></span></li>
+         <li id="12">/<br/><span class="module"></span></li>
+         <li id="13">/<br/><span class="module"></span></li>
+         <li id="14">/<br/><span class="module"></span></li>
+         <li id="15">/<br/><span class="module"></span></li>
+         <li id="16">/<br/><span class="module"></span></li>
+         <li id="17">/<br/><span class="module"></span></li>
+       </ul>
+     </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script><script  src="./script.js"></script>
+  <script>
+    // Function to play audio when user interacts with the page
+    function playAudio() {
+        var audio = document.getElementById('hidden-audio');
+        audio.play()
+            .then(function () {
+                console.log('Audio is playing.');
+            })
+            .catch(function (error) {
+                console.error('Error playing audio: ' + error.message);
+            });
+    }
+  
+    // Event listener to play audio when the page is clicked
+    document.addEventListener('click', function () {
+        // Check if the audio is paused (not playing)
+        var audio = document.getElementById('hidden-audio');
+        if (audio.paused) {
+            playAudio();
+        }
+    });
+  </script>
+</body>
+</html>
